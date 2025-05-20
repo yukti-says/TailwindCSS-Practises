@@ -1,24 +1,3 @@
-# Node modules
 node_modules/
-
-# Build output
 dist/
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-
-# IDE/Editor folders
-.vscode/
-*.code-workspace
-
-# Tailwind watcher cache
-*.css.map
-
-# Optional: Image caches
-images/*.webp
+.env
