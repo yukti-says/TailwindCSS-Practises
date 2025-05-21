@@ -4,3 +4,6 @@
 
 /* npx tailwindcss -i ./src/input.css -o ./dist/style.css --watch
 to start working of the css tailwind */
+/*  <link rel="stylesheet" href="../../dist/style.css"> */
+
+/* ctrl+Z undo and ctrl+y redo */
