@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Delete Confirm Modal</title>
+  <link href="../../dist/style.css" rel="stylesheet" />
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+  <!-- Trigger Button -->
+  <button id="openDelete" class="bg-red-600 text-white px-6 py-2 rounded hover:bg-red-700 transition">
+    Delete Item
+  </button>
+
+  <!-- Modal -->
+  <div id="deleteModal" class="fixed inset-0 bg-black/50 hidden justify-center items-center z-50">
+    <div class="bg-white p-6 rounded-lg shadow-lg max-w-sm w-full">
+      <h2 class="text-xl font-bold text-gray-800 mb-2">Are you sure?</h2>
+      <p class="text-gray-600 mb-4">This action cannot be undone. Please confirm to delete the item.</p>
+
+      <div class="flex justify-end space-x-4">
+        <button id="cancelBtn" class="bg-gray-300 px-4 py-2 rounded hover:bg-gray-400 transition">
+          Cancel
+        </button>
+        <button class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const openBtn = document.getElementById('openDelete');
+    const modal = document.getElementById('deleteModal');
+    const cancelBtn = document.getElementById('cancelBtn');
+
+    openBtn.addEventListener('click', () => modal.classList.remove('hidden'));
+    cancelBtn.addEventListener('click', () => modal.classList.add('hidden'));
+
+    // Click outside to close
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+      }
+    });
+  </script>
+</body>
+</html>
